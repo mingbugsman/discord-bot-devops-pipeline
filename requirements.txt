@@ -1,4 +1,5 @@
 discord.py
 python-dotenv
 pytest
+pytest-mock
 pylint
