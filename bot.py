@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import os
+import requests
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -19,6 +20,17 @@ async def on_ready():
 @bot.command()
 async def ping(ctx):
     await ctx.send("Hallo hallo hallo!")
+
+@bot.command()
+async def meme(ctx):
+    res = requests.get("https://meme-api.com/gimme")
+    data = res.json()
+
+    embed = discord.Embed(title=data["title"], color=0x00ff00)
+    embed.set_image(url=data["url"])
+    embed.set_footer(text=f"👍 {data['ups']} upvotes")
+
+    await ctx.send(embed=embed)
 
 if __name__ == "__main__":
     bot.run(TOKEN)
