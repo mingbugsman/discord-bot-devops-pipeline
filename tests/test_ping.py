@@ -9,4 +9,4 @@ async def test_ping():
 
     await ping(ctx)
 
-    ctx.send.assert_called_once_with("Pong!")
+    ctx.send.assert_called_once_with("Hallo hallo hallo!!")
