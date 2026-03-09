@@ -28,6 +28,7 @@ async def test(ctx):
 
     # debug print (Sonar cũng ghét)
     print("Debug result:", result)
+    print(PASSWORD)
 
     await ctx.send("Sonar test command chạy!")
 
