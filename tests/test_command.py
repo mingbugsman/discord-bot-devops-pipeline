@@ -15,15 +15,6 @@ PASSWORD = "123456"
 async def test(ctx):
     a = 1
     b = 2
-    c = 3
-    d = 4
-    e = 5
-    f = 6
-    g = 7
-    h = 8
-    i = 9
-    j = 10
-
     # code smell: unused variables
     result = a + b
 
@@ -35,14 +26,3 @@ async def test(ctx):
 
 def test_calculate_sum():
     assert calculate_sum(1,2) == 3
-
-# duplicate function để tạo code smell
-def duplicate():
-    x = 1
-    y = 2
-    print(x + y)
-
-def duplicate():
-    x = 1
-    y = 2
-    print(x + y)
