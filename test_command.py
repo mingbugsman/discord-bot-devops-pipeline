@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from bad_command import calculate_sum
 import os
 
 intents = discord.Intents.default()
@@ -31,6 +32,9 @@ async def test(ctx):
     print(PASSWORD)
 
     await ctx.send("Sonar test command chạy!")
+
+def test_calculate_sum():
+    assert calculate_sum(1,2) == 3
 
 # duplicate function để tạo code smell
 def duplicate():
